@@ -1,3 +1,20 @@
+//Api
+const URL_breeds = "https://dog.ceo/api/breeds/list"
+fetch(URL_breeds)
+    .then ( (res) => res.json())
+    .then ( (data) => {
+    let mensaje = data.message
+    console.log(mensaje);
+    let select = document.getElementById("raza"); //Seleccionamos el select
+    
+    mensaje.forEach(element => {
+        console.log(element);
+        const option = document.createElement("option")
+        option.innerHTML = element
+        select.appendChild(option)
+    });
+})
+
 const boton = document.getElementById("boton")
 // AGREGAR MASCOTAS
 boton.addEventListener("click", function(e) {
@@ -30,6 +47,15 @@ const nombresMascotas = [
 
 ]
 // FUNCIONES
+function cargar(array) {
+    var select = document.getElementById("razas"); //Seleccionamos el select
+    
+    for(var i=0; i < array.length; i++){ 
+        var option = document.createElement("option"); //Creamos la opcion
+        option.innerHTML = array[i]; //Metemos el texto en la opción
+        select.appendChild(option); //Metemos la opción en el select
+    }
+}
 function agregarMascota(){
     almacenados.push(nuevaMascota)
     document.getElementById("table").innerHTML += `<tbody><td>${nuevaMascota.nombre}</td><td>${nuevaMascota.raza}</td><td>${nuevaMascota.dueño}</td><td>${nuevaMascota.peso}</td></tbody>`
