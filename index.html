@@ -7,20 +7,27 @@
 
 </head>        
 <body> 
-  <nav class="navbar navbar-light" style="background-color: aqua;">
-    <div class="container-fluid">
-      <a class="navbar-brand">Peluqueria Canina PAWS</a>
-    </div>
-  </nav>
-  
+<div class="container">
+  <header id="head">
+    <img src="coderimage.png" class="logo">
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Turnos</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
 <div class="container">     
   <form class="form"> 
     <div class="boxes">
       <h1>AGREGAR CLIENTES</h1>
-      <div ><input id="nombre" class="form_input" type="textarea" placeholder="Ingresar nombre de la Mascota" required ></div>
-      <div ><select id="raza" class="form_input" placeholder="Ingresar raza" required ></div>
-      <div ><input id="dueño" class="form_input" type="text" placeholder="Ingresar dueño" required ></div>
-      <div ><input id="peso" class="form_input" type="datetime-local" placeholder="Ingresar peso" required ></div>
+      <div ><input id="nombre" class="form_input" type="textarea" placeholder="Ingresar nombre de la Mascota" ></div>
+      <div ><select id="raza" class="form_input" placeholder="Ingresar raza" ></div>
+      <div ><input id="dueño" class="form_input" type="text" placeholder="Ingresar dueño" ></div>
+      <div ><input id="fecha" class="form_input" type="date" placeholder="Ingresar peso" ></div>
       <div><input id="boton" class="btn btn-outline-dark" type="reset" value="Agregar" ></div>
       <table class="table" id="table">
         <thead class="thread-inverse">
@@ -64,5 +71,6 @@
   </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="js/funciones.js"></script>
 </html>    
